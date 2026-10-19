@@ -1,6 +1,6 @@
 # Portfolio : Christophe Barbuscia
 
-
+https://voidplatypus.github.io/Eval_Portfolio/
 
 ## Pages
 
@@ -14,9 +14,11 @@
 
 ## Lancer le projet
 
-```bash
-Puis ouvrir Index.html dans un navigateur (ou utiliser l'extension Live Server de VS Code).
-Structure
+Cliquer sur le lien en haut du Readme
+
+
+## Structure
+
 ├── Index.html
 ├── contact.html
 ├── Style.css
