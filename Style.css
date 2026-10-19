@@ -6,6 +6,7 @@
         font-family: 'Courier New', monospace;
         min-height: 100vh;
         padding: 3rem;
+        color: #E2E8F0 ;
     }
     #titre-accueil{
         text-align: center;
@@ -61,7 +62,12 @@
     object-fit: cover;
     border-radius: 50%;
     }
-
+    #titre-accueil{
+        color: #38BDF8 ;
+    }
+    .paragraphe{
+        color: #38BDF8 ;
+    }
     .project{
     box-sizing: border-box;
     width: 100%;
@@ -72,4 +78,7 @@
     overflow-wrap: anywhere;
 }
 
+    .project-link{
+        color:#38BDF8  ;
+    }
 
