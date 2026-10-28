@@ -19,7 +19,7 @@ jobs:
 
         - name: Generate config.js from secrets
           run: |
-            cat <<EOF < config.js 
+            cat <<EOF > config.js 
             window.APP_CONFIG = {
               API_URL: "${{secrets.API_URL}}",
               API_KEY: "${{secrets.API_KEY}}",
