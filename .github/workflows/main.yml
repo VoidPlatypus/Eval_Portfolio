@@ -1,0 +1,41 @@
+name: Deploye to github pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions: 
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+    deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: checkout repository
+          uses: actions/checkout@v4
+
+        - name: Generate config.js from secrets
+          run: |
+            cat <<EOF > config.js 
+            window.APP_CONFIG = {
+              API_URL: "${{secrets.API_URL}}",
+              API_KEY: "${{secrets.API_KEY}}",
+            };
+            EOF
+        
+        - name: Setup pages
+          uses: actions/configure-pages@v4
+
+        - name: Upload artifact
+          uses : actions/upload-pages-artifact@v3
+          with:
+            path: .
+
+        - name: Deploy to github pages
+          id: deployment
+          uses: actions/deploy-pages@v4
+
+          
